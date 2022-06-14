@@ -20,9 +20,14 @@ ssh hagstens.dk@ssh.hagstens.dk
 cd /customers/0/8/a/hagstens.dk/
 
 Vi ønsker nu at slette den version af hjemmesiden som ligger på serveren:
-cd /customers/0/8/a/hagstens.dk/httpd.www/
 rm httpd.www/ -rf
+Her vil den brokke sig men filerne er slettet så gå blot videre til næste skridt:
+
 Nu er filerne på webserveren slettet og vi kan downloade den nye version:
+
+cd /customers/0/8/a/hagstens.dk/httpd.www
 git clone https://github.com/karlsson4100/hagstens.dk.git
 Nu flytter vi filerne til den rigtige mappe:
 mv /customers/0/8/a/hagstens.dk/httpd.www/hagstens.dk/public_html/* /customers/0/8/a/hagstens.dk/httpd.www/
+
+cache-purge
