@@ -1,9 +1,28 @@
+Ændring af hjemmeside:
+
+Sublime-text
+Gem ændringer: Save All
+-----
+Åben terminal
+cd Hagstens_KORREKT/
+git add .
+git commit -m "kommentar til ændring"
+git push
+
+brugernavn og kodeord til github:
+navn: karlsson4100@gmail.com
+kode: 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
+
+Nu er hjemmesiden uploadet online til github og den skal den nyeste version skal nu downloades til One.com server
+------
 ssh hagstens.dk@ssh.hagstens.dk
+
+cd /customers/0/8/a/hagstens.dk/
+
+Vi ønsker nu at slette den version af hjemmesiden som ligger på serveren:
 cd /customers/0/8/a/hagstens.dk/httpd.www/
-
-
-
-
-
-
+rm httpd.www/ -rf
+Nu er filerne på webserveren slettet og vi kan downloade den nye version:
+git clone https://github.com/karlsson4100/hagstens.dk.git
+Nu flytter vi filerne til den rigtige mappe:
 mv /customers/0/8/a/hagstens.dk/httpd.www/hagstens.dk/public_html/* /customers/0/8/a/hagstens.dk/httpd.www/
